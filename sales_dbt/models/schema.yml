@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: stg_sales_clean
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        tests:
+          - not_null
+      - name: revenue
+        tests:
+          - not_null
+  - name: customer_segments_dbt
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+      - name: total_orders
+        tests:
+          - not_null
+      - name: total_revenue
+        tests:
+          - not_null
