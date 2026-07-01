@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: sales
+    schema: sales
+    tables:
+      - name: sales_raw
+      - name: sales_cleana
