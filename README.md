@@ -20,18 +20,17 @@ sales.sales_raw  →  stg_sales_clean  →  customer_segments_dbt
 
 ```
 dbt-sales-analytics/
-├── sales_dbt/
-│   ├── models/
-│   │   ├── sources.yml           # Declares sales_raw, sales_clean as external sources
-│   │   ├── schema.yml            # Column-level tests (not_null, unique)
-│   │   ├── staging/
-│   │   │   └── stg_sales_clean.sql
-│   │   └── marts/
-│   │       └── customer_segments_dbt.sql
-│   └── dbt_project.yml
+├── .gitignore
+├── README.md
 ├── docs/
 │   └── lineage_graph.png
-└── README.md
+└── sales_dbt/
+    ├── dbt_project.yml
+    └── models/
+        ├── marts/customer_segments_dbt.sql
+        ├── schema.yml      # Column-level tests (not_null, unique)
+        ├── sources.yml     # Declares sales_raw, sales_clean as external 
+        └── staging/stg_sales_clean.sql
 ```
 ## Tech stack
 
