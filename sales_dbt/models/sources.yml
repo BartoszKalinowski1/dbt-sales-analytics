@@ -5,4 +5,4 @@ sources:
     schema: sales
     tables:
       - name: sales_raw
-      - name: sales_cleana
+      - name: sales_clean
