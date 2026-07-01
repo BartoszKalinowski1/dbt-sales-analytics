@@ -12,8 +12,9 @@ Reads raw sales data already loaded into PostgreSQL by the `etl-sales-pipeline` 
 Both models are validated with automated tests (`not_null`, `unique`) and documented with an interactive lineage graph.
 
 ## Lineage
+```
 sales.sales_raw  →  stg_sales_clean  →  customer_segments_dbt
-
+```
 ![Lineage graph](docs/lineage_graph.png)
 
 ## Repository structure
